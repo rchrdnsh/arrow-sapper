@@ -21,6 +21,7 @@ function getAllPosts(filesPath) {
     // Builds data
     return {
       ...data,
+      slug: fileName.substring(0, fileName.length - 3),
       html
     };
   });
