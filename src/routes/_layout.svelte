@@ -1,0 +1,99 @@
+<script>
+	export let segment;
+</script>
+
+<style>
+	.app {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		grid-row: 1 / 2;
+		grid-column: 1 / 2;
+		width: 100%;
+		height: 100%;
+		display: grid;
+		grid-template-columns: 6rem calc(100vw - 6rem);
+		grid-template-columns: 6rem 1fr;
+		grid-template-rows: 1fr;
+		column-gap: 8px;
+		border: 8px solid #fff;
+	}
+
+	nav {
+		grid-row: 1 / 2;
+		grid-column: 1 / 2;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: 100%;
+		border: 8px solid hsla(215, 64%, 50%, 1);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		list-style-type: none;	
+	}
+
+	li {
+		color: black;
+	}
+
+	[aria-current] {
+		position: relative;
+		display: inline-block;
+	}
+
+	[aria-current]::after {
+		position: absolute;
+		content: '';
+		width: calc(100% - 1em);
+		height: 2px;
+		background-color: rgb(255,62,0);
+		display: block;
+		bottom: -1px;
+	}
+
+	a {
+		text-decoration: none;
+		padding: 1em 0.5em;
+		display: block;
+	}
+
+	main {
+		box-sizing: border-box;
+		grid-row: 1 / 2;
+		grid-column: 2 / 3;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: 90vh;
+		height: calc(100vh - 16px);
+		border: 8px solid hsla(215, 64%, 50%, 1);
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+		/* box-shadow: inset 0px 0px 32px hsla(0, 0%, 0%, 0.5); */
+	}
+</style>
+
+<div class='app'>
+	<nav>
+		<ul>
+			<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a></li>
+			<li><a aria-current="{segment === 'about' ? 'page' : undefined}" href="about">about</a></li>
+			<li><a rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">blog</a></li>
+			<li><a aria-current="{segment === 'stuff' ? 'page' : undefined}" href="stuff">stuff</a></li>
+			<li><a aria-current="{segment === 'test' ? 'page' : undefined}" href="test">test</a></li>
+		</ul>
+	</nav>
+	<main>
+		<slot></slot>
+	</main>
+</div>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>Up Arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="Up-Arrow" stroke="#fff" stroke-width="2">
+            <g id="up-arrow" transform="translate(2.000000, 2.000000)">
+                <path d="M6,4.4408921e-16 L6,12" id="Path" transform="translate(6.000000, 6.000000) rotate(-180.000000) translate(-6.000000, -6.000000) "></path>
+                <polyline id="Path-2" transform="translate(6.000000, 3.000000) rotate(-180.000000) translate(-6.000000, -3.000000) " points="12 -1.77635684e-15 6 6 -8.8817842e-16 -1.77635684e-15"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

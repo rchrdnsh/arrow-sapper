@@ -1,0 +1,49 @@
+*, *:before, *:after {
+  box-sizing: inherit;
+  font-family: sans-serif;
+}
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+html, body {
+	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  overscroll-behavior: none;
+  color: black;
+  background: #EDF2F7
+}
+
+body {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+}
+
+a {
+	color: inherit;
+}
+
+button {
+  flex: 0 1 auto;
+  margin-bottom: 2rem;
+  padding: 16px 24px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #2B6BC2;
+  box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.1);
+  font-family: 'montserrat', sans-serif;
+  font-size: calc(10px + (14 - 10) * ((100vw - 300px) / (1600 - 300)));;
+  line-height: 1;
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+  transition: background-color 500ms ease, color 500ms ease;
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>smile</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="smile" stroke-width="0.5" stroke="#333">
+            <g transform="translate(2.000000, 2.000000)" id="head">
+                <circle cx="6" cy="6" r="6"></circle>
+            </g>
+            <path d="M5,9 C6.01787712,11.9647637 10.013312,11.8669237 11,9" id="mouth" stroke-linecap="round"></path>
+            <path d="M8.99875494,6.5 C8.99875494,5 11,5 11,6.5" id="right-eye" stroke-linecap="round"></path>
+            <path d="M4.99875494,6.5 C4.99875494,5 7,5 7,6.5" id="left-eye" stroke-linecap="round"></path>
+        </g>
+    </g>
+</svg>

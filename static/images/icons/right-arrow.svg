@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>Right Arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="Right-Arrow" stroke="#fff" stroke-width="2">
+            <g id="right-arrow" transform="translate(2.000000, 2.000000)">
+                <path d="M6,4.4408921e-16 L6,12" id="Path" transform="translate(6.000000, 6.000000) rotate(-90.000000) translate(-6.000000, -6.000000) "></path>
+                <polyline id="Path-2" transform="translate(9.000000, 6.000000) rotate(-90.000000) translate(-9.000000, -6.000000) " points="15 3 9 9 3 3"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

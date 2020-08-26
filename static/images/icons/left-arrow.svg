@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>Left Arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="Left-Arrow" stroke="#fff" stroke-width="2">
+            <g id="left-arrow" transform="translate(2.000000, 2.000000)">
+                <path d="M12,6 L-1.77635684e-15,6" id="Path"></path>
+                <polyline id="Path-2" transform="translate(3.000000, 6.000000) rotate(-270.000000) translate(-3.000000, -6.000000) " points="9 3 3 9 -3 3"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>
