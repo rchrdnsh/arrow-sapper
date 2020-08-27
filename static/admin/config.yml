@@ -15,7 +15,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Embed", name: "embed", widget: "markdown" }
+      - { label: "Embed", name: "embed", widget: "code", lang="html" }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "work"
