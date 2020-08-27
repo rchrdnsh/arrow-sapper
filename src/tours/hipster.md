@@ -2,19 +2,6 @@
 title: Hipster
 slug: hipster
 date: 2019-06-16
-embed: >-
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!4v1598216626267!6m8!1m7!1sCAoSLEFGMVFpcFBJeTdjVDBjSUVyN25ielRpMFlhY2diaXVkSTB1LVo4NHpNYVMz!2m2!1d33.7885136715469!2d-118.2955232616455!3f103.4863553773484!4f5.31353114715742!5f0.7820865974627469"
-    width="80%"
-    height="500"
-    frameborder="0"
-    style="border:8px solid #33cccc;"
-    allowfullscreen=""
-    aria-hidden="false"
-    tabindex="0"
-  >
-
-  </iframe>
 ---
 
 # Blended Orange Affogato
