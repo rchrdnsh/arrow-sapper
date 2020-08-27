@@ -2,6 +2,19 @@
 title: Khaled
 slug: khaled
 date: 2020-06-16
+embed: >-
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!4v1598216797671!6m8!1m7!1sCAoSLEFGMVFpcE0tN24xdXlmcGgwbDRlRE0wQ1EyX0F1Q3ZvWDBRUnVOTUhQd0Zk!2m2!1d33.917933028026!2d-117.93932981501!3f202.45628378674894!4f1.1085299265177042!5f0.6628915206305512"
+    width="80%"
+    height="450"
+    frameborder="0"
+    style="border: 8px solid #33cccc;"
+    allowfullscreen=""
+    aria-hidden="false"
+    tabindex="0"
+  >
+
+  </iframe>
 ---
 
 # Major Keys!
