@@ -62,8 +62,9 @@
   }
 
   img {
-    width: 20rem;
+    width: 16rem;
     height: auto;
+    border: 8px solid #009999;
   }
 </style>
 
