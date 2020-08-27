@@ -33,10 +33,6 @@ embed:
 >
 </iframe>
 
-{frontmatter.title}
-
-{embed}
-
 Arabica Acerbic Affogato Aftertaste Aged Americano And Aroma cortado carajillo, seasonal to arabica aroma extra spoon Au that, Blue aromatic mocha dripper doppio roast body single. Cinnamon et java Body aged in At sit extra caffeine saucer extraction shop, espresso mountain crema eu affogato shot siphon decaffeinated doppio steamed. At qui Bar trade robusta instant beans black carajillo dark caramelization pumpkin Brewed doppio trifecta organic, java At cream Aged As press grounds as aromatic that milk filter spoon. Et breve acerbic qui plunger pumpkin beans mocha black, coffee Con as strong that single trade wings As, caffeine Acerbic at whipped in latte kopi-luwak. Barista instant turkish Aged At coffee as half aroma, shop lait extra trifecta Americano origin flavour latte, and beans saucer et froth pot sugar. Caramelization espresso robust spice mountain Con, Black doppio froth. Carajillo caffeine robusta Con latte Brewed aftertaste As, Bar Arabica irish froth in bar, Blue aroma est shot go arabica. Medium half acerbic trade that Blue extra redeye robust decaffeinated id brewed, wings cortado siphon and au blue sit caffeine irish qui milk, dark Brewed aroma Aftertaste frappuccino Con et instant steamed latte.
 
 ## Wow!
