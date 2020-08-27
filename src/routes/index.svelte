@@ -3,10 +3,6 @@
 </script>
 
 <style>
-	h1 {
-		color: green;
-	}
-	
 	.container {
 		margin: 0;
 		padding: 0;
@@ -17,16 +13,22 @@
 		align-items: center;
 		justify-content: center;
 	}
+
+	img {
+		width: 32vw;
+		margin: 0;
+		padding: 0;
+	}
 </style>
 
 <svelte:head>
-	<title>About</title>
+	<title>Sapper project template</title>
 </svelte:head>
 
 <div class='container' in:fadeIn out:fadeOut>
-
-# About this site
-
-This is the 'about' page. There's not much here.
-
+	<h1>Great success!</h1>
+	<img src='great-success.png' alt='Borat!'>
+	<p>Very nice.</p>
 </div>
+
+

@@ -79,18 +79,17 @@
 		border: 8px solid hsla(215, 64%, 50%, 1);
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
-		/* box-shadow: inset 0px 0px 32px hsla(0, 0%, 0%, 0.5); */
 	}
 </style>
 
 <div class='app'>
 	<nav>
 		<ul>
-			<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a></li>
-			<li><a aria-current="{segment === 'about' ? 'page' : undefined}" href="about">about</a></li>
-			<li><a rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">blog</a></li>
-			<li><a aria-current="{segment === 'stuff' ? 'page' : undefined}" href="stuff">stuff</a></li>
-			<li><a aria-current="{segment === 'test' ? 'page' : undefined}" href="test">test</a></li>
+			<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">Home</a></li>
+			<li><a aria-current="{segment === 'about' ? 'page' : undefined}" href="about">About</a></li>
+			<li><a rel=prefetch aria-current="{segment === 'tours' ? 'page' : undefined}" href="tours">Tours</a></li>
+			<li><a aria-current="{segment === 'stuff' ? 'page' : undefined}" href="stuff">Stuff</a></li>
+			<li><a aria-current="{segment === 'test' ? 'page' : undefined}" href="test">Test</a></li>
 		</ul>
 	</nav>
 	<main>

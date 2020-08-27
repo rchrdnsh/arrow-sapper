@@ -1,10 +1,10 @@
 <script context="module">
   export async function preload({ params, query }) {
-    const res = await this.fetch(`blog/${params.slug}.json`);
+    const res = await this.fetch(`tours/${params.slug}.json`);
     const data = await res.json();
 
     if (res.status === 200) {
-      return { post: data };
+      return { tour: data };
     } else {
       this.error(res.status, data.message);
     }
@@ -12,7 +12,7 @@
 </script>
 
 <script>
-  export let post;
+  export let tour;
 </script>
 
 <style>
@@ -20,7 +20,7 @@
 		By default, CSS is locally scoped to the component,
 		and any unused styles are dead-code-eliminated.
 		In this page, Svelte can't know which elements are
-		going to appear inside the {{{post.html}}} block,
+		going to appear inside the {{{tour.html}}} block,
 		so we have to use the :global(...) modifier to target
 		all elements inside .content
 	*/
@@ -63,10 +63,10 @@
 </style>
 
 <svelte:head>
-  <title>{post.title}</title>
+  <title>{tour.title}</title>
 </svelte:head>
 
 <div class="content">
-  <h1 class='title'>{post.title}</h1>
-  {@html post.html}
+  <h1 class='title'>{tour.title}</h1>
+  {@html tour.html}
 </div>

@@ -1,18 +1,14 @@
-// --------------------------------
-// Level Up Tuts
-// --------------------------------
-
 import fs from 'fs'
 import path from 'path'
 import marked from 'marked'
 import grayMatter from 'gray-matter'
 
-function getAllPosts(filesPath) {
+function getAllTours(filesPath) {
   const data = fs.readdirSync(filesPath).filter(f => /.*\.md$/.test(f)).map((fileName) => {
-    const post = fs.readFileSync(path.resolve(filesPath, fileName), "utf-8");
+    const tour = fs.readFileSync(path.resolve(filesPath, fileName), "utf-8");
 
     // Parse Front matter from string
-    const { data, content } = grayMatter(post);
+    const { data, content } = grayMatter(tour);
 
     // Turns markdown into html
     const renderer = new marked.Renderer();
@@ -29,11 +25,11 @@ function getAllPosts(filesPath) {
 }
 
 export function get(req, res) {
-  const posts = getAllPosts("src/posts");
+  const tours = getAllTours("src/tours");
 
   res.writeHead(200, {
     "Content-Type": "application/json",
   });
 
-  res.end(JSON.stringify(posts));
+  res.end(JSON.stringify(tours));
 }

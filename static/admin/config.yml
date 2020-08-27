@@ -6,12 +6,32 @@ media_folder: static/uploads
 public_folder: /uploads
 
 collections:
-  - name: "posts"
-    label: "Posts"
-    folder: "src/posts"
+  - name: "tours"
+    label: "Tours"
+    folder: "src/tours"
     create: true
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
+
+  # - name: "work"
+  #   label: "Work"
+  #   folder: "src/work"
+  #   create: true
+  #   slug: "{{slug}}"
+  #   fields:
+  #     - { label: "Title", name: "title", widget: "string" }
+  #     - { label: "Date", name: "date", widget: "datetime" }
+  #     - { label: "Body", name: "body", widget: "markdown" }
+
+  # - name: "team"
+  #   label: "Team"
+  #   folder: "src/team"
+  #   create: true
+  #   slug: "{{slug}}"
+  #   fields:
+  #     - { label: "Title", name: "title", widget: "string" }
+  #     - { label: "Date", name: "date", widget: "datetime" }
+  #     - { label: "Body", name: "body", widget: "markdown" }

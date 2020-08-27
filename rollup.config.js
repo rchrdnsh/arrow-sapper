@@ -41,36 +41,29 @@ export default {
 			}),
 			commonjs(),
 
-			legacy &&
-				babel({
+			legacy && babel({
 					extensions: [".js", ".mjs", ".html", ...extensions],
 					babelHelpers: 'runtime',
 					exclude: ["node_modules/@babel/**"],
 					presets: [
-						[
-							"@babel/preset-env",
-							{
-								targets: "> 0.25%, not dead"
-							}
-						]
+						['@babel/preset-env', {
+								targets: '> 0.25%, not dead'
+							}]
 					],
 					plugins: [
-						"@babel/plugin-syntax-dynamic-import",
-						[
-							"@babel/plugin-transform-runtime",
-							{
-								useESModules: true
-							}
-						]
+						'@babel/plugin-syntax-dynamic-import',
+						['@babel/plugin-transform-runtime', {
+							useESModules: true
+						}]
 					]
 				}),
 
-			!dev &&
-				terser({
-					module: true
-				})
+			!dev && terser({
+				module: true
+			})
 		],
 
+		preserveEntrySignatures: false,
 		onwarn
 	},
 

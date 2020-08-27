@@ -1,45 +1,13 @@
-<!-- <script context="module">
-  export async function preload({ params, query }) {
-    const res = await this.fetch(`blog/recentPosts.json`);
-    const posts = await res.json();
-    return { posts };
-  }
-</script> -->
-
-<!-- <script>
-  // import { fly } from "svelte/transition";
-
-  // export let segment;
-  // export let posts;
-</script> -->
-
-<!-- <div> -->
-  <!-- {#if segment}
-    <aside>
-      <h4>Post Archive</h4>
-      <ul>
-        {#each posts as post}
-          <li>
-            <a rel="prefetch" href="blog/{post.slug}">{post.title}</a>
-          </li>
-        {/each}
-      </ul>
-    </aside>
-  {/if} -->
-  <!-- <slot /> -->
-<!-- </div> -->
-
-
 <script context="module">
   export async function preload({ params, query }) {
-    const res = await this.fetch(`blog.json`);
-    const posts = await res.json();
-    return { posts };
+    const res = await this.fetch(`tours.json`);
+    const tours = await res.json();
+    return { tours };
   }
 </script>
 
 <script>
-  export let posts;
+  export let tours;
 	import { fadeIn, fadeOut } from "../../animate";
 </script>
 
@@ -84,12 +52,12 @@
 		color: black;
 	}
 
-	/* [aria-current] {
+	[aria-current] {
 		position: relative;
 		display: inline-block;
-	} */
+	}
 
-	/* [aria-current]::after {
+	[aria-current]::after {
 		position: absolute;
 		content: '';
 		width: calc(100% - 1em);
@@ -97,7 +65,7 @@
 		background-color: rgb(255,62,0);
 		display: block;
 		bottom: -1px;
-	} */
+	}
 
 	a {
 		text-decoration: none;
@@ -121,10 +89,9 @@
 <div class='app' in:fadeIn out:fadeOut>
 	<nav>
 		<ul>
-      {#each posts as post}
+      {#each tours as tour}
         <li>
-          <!-- <a rel="prefetch" href="blog/{post.slug}">{post.title} - {post.date}</a> -->
-          <a rel="prefetch" href="blog/{post.slug}">{post.title}</a>
+          <a rel="prefetch" href="tours/{tour.slug}">{tour.title}</a>
         </li>
       {/each}
 		</ul>
