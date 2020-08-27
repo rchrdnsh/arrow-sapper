@@ -1,7 +1,22 @@
 ---
 title: Coffee
 slug: coffee
-date: "2020-06-17"
+date: 2020-06-17
+tour:
+  code: >-
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!4v1598216420990!6m8!1m7!1sCAoSLEFGMVFpcE5PdUMwYzQ3OTBYcFBSSmhCeGIyVGFUMlk0MERfbXdRQmg3SUdp!2m2!1d33.861418305002!2d-118.28037206905!3f269.34175891360513!4f-2.6865800030317644!5f0.7820865974627469"
+      width="80%"
+      height="500"
+      frameborder="0"
+      style="border: 8px solid #33cccc;"
+      allowfullscreen=""
+      aria-hidden="false"
+      tabindex="0"
+    >
+
+    </iframe>
+  lang: html
 ---
 
 # Fresh Pressed
