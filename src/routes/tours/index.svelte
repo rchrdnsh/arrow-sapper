@@ -15,9 +15,7 @@
 </svelte:head>
 
 <div>
-
   <h1>All the Virtual Tours you could ask for.</h1>
-
   <ul>
     {#each tours as tour}
       <li>
@@ -25,5 +23,4 @@
       </li>
     {/each}
   </ul>
-
 </div>

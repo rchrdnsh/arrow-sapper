@@ -16,22 +16,24 @@ collections:
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
 
-  # - name: "work"
-  #   label: "Work"
-  #   folder: "src/work"
-  #   create: true
-  #   slug: "{{slug}}"
-  #   fields:
-  #     - { label: "Title", name: "title", widget: "string" }
-  #     - { label: "Date", name: "date", widget: "datetime" }
-  #     - { label: "Body", name: "body", widget: "markdown" }
+  - name: "work"
+    label: "Work"
+    folder: "src/work"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
 
-  # - name: "team"
-  #   label: "Team"
-  #   folder: "src/team"
-  #   create: true
-  #   slug: "{{slug}}"
-  #   fields:
-  #     - { label: "Title", name: "title", widget: "string" }
-  #     - { label: "Date", name: "date", widget: "datetime" }
-  #     - { label: "Body", name: "body", widget: "markdown" }
+  - name: "team"
+    label: "Team"
+    folder: "src/team"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Position", name: "position", widget: "string" }
+      - { label: "Picture", name: "picture", widget: "string" }
+      - { label: "Alt", name: "alt", widget: "string" }
+      - { label: "Bio", name: "bio", widget: "markdown" }
