@@ -88,7 +88,7 @@
 			<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">Home</a></li>
 			<li><a aria-current="{segment === 'about' ? 'page' : undefined}" href="about">About</a></li>
 			<li><a rel=prefetch aria-current="{segment === 'tours' ? 'page' : undefined}" href="tours">Tours</a></li>
-			<li><a aria-current="{segment === 'stuff' ? 'page' : undefined}" href="stuff">Stuff</a></li>
+			<li><a aria-current="{segment === 'team' ? 'page' : undefined}" href="team">Team</a></li>
 			<li><a aria-current="{segment === 'test' ? 'page' : undefined}" href="test">Test</a></li>
 		</ul>
 	</nav>

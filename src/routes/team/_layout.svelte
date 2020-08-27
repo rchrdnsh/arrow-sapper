@@ -1,6 +1,14 @@
+<script context="module">
+  export async function preload({ params, query }) {
+    const res = await this.fetch(`team.json`);
+    const team = await res.json();
+    return { team };
+  }
+</script>
+
 <script>
+  export let team;
 	import { fadeIn, fadeOut } from "../../animate";
-	export let segment;
 </script>
 
 <style>
@@ -78,15 +86,16 @@
 	}
 </style>
 
-
 <div class='app' in:fadeIn out:fadeOut>
 	<nav>
 		<ul>
-			<li><a aria-current="{segment === 'things' ? 'page' : undefined}" href="stuff/things">things</a></li>
-			<li><a aria-current="{segment === 'junk' ? 'page' : undefined}" href="stuff/junk">junk</a></li>
-			<li><a aria-current="{segment === 'dang' ? 'page' : undefined}" href="stuff/dang">Dang!</a></li>
+      {#each team as member}
+        <li>
+          <a rel="prefetch" href="team/{member.slug}">{member.name}</a>
+        </li>
+      {/each}
 		</ul>
-</nav>
+  </nav>
 	<main>
 		<slot></slot>
 	</main>
