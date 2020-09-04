@@ -63,7 +63,7 @@
     grid-template-columns: repeat(12, 1fr);
     background: url('../../assets/images/logos/arrow-favicon-blue-10-percent.svg') no-repeat center center;
     background-size: 100%;
-    background: #EDF2F7;
+    background: var(--background-1);
   }
 
   .title,

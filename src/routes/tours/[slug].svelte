@@ -68,6 +68,6 @@
 
 <div class="content">
   <h1 class='title'>{tour.title}</h1>
-  {@html tour.embed}
+  {@html tour.embed.code}
   {@html tour.html}
 </div>
