@@ -76,12 +76,12 @@
     color: white;
   }
 
-  p {
+  /* p {
     box-sizing: border-box;
     font-size: calc(14px + (14 - 14) * ((100vw - 300px) / (1600 - 300)));
     padding: 0 0.5rem;
     color: white;
-  }
+  } */
 
   button {
     flex: 0 1 auto;
@@ -122,9 +122,9 @@
       padding-bottom: calc(8px + (20 - 8) * ((100vw - 300px) / (1600 - 300)));
     }
 
-    p {
+    /* p {
       font-size: calc(14px + (14 - 14) * ((100vw - 300px) / (1600 - 300)));
-    }
+    } */
 
     button {
       font-size: calc(8px + (20 - 8) * ((100vw - 300px) / (1600 - 300)));
@@ -150,9 +150,9 @@
       padding-bottom: calc(6px + (16 - 6) * ((100vw - 300px) / (1600 - 300)));
     }
 
-    p {
+    /* p {
       font-size: calc(14px + (14 - 14) * ((100vw - 300px) / (1600 - 300)));
-    }
+    } */
 
     button {
       font-size: calc(10px + (14 - 10) * ((100vw - 300px) / (1600 - 300)));
@@ -175,9 +175,9 @@
       font-size: calc(14px + (14 - 14) * ((100vw - 300px) / (1600 - 300)));
     }
 
-    p {
+    /* p {
       font-size: calc(14px + (14 - 14) * ((100vw - 300px) / (1600 - 300)));
-    }
+    } */
 
     button {
       font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1600 - 300)));

@@ -4,6 +4,8 @@
 }
 
 :root {
+  --fonts: 'montserrat', 'open sans', sans-serif;
+
   --blue-1: hsla(215, 64%, 50%, 1);
   --blue-2: hsla(215, 64%, 65%, 1);
   --blue-3: hsla(215, 64%, 80%, 1);
@@ -29,13 +31,11 @@
 }
 
 html {
-  font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 
 html, body {
-	box-sizing: border-box;
   margin: 0;
   padding: 0;
   width: 100vw;
@@ -66,7 +66,7 @@ button {
   border-radius: 8px;
   background-color: #2B6BC2;
   box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.1);
-  font-family: 'montserrat', sans-serif;
+  font-family: var(--fonts);
   font-size: calc(10px + (14 - 10) * ((100vw - 300px) / (1600 - 300)));;
   line-height: 1;
   font-weight: 400;
