@@ -1,38 +1,26 @@
 *, *:before, *:after {
   box-sizing: inherit;
-  font-family: sans-serif;
 }
 
 :root {
-  --fonts: 'montserrat', 'open sans', sans-serif;
-
   --blue-1: hsla(215, 64%, 50%, 1);
   --blue-2: hsla(215, 64%, 65%, 1);
   --blue-3: hsla(215, 64%, 80%, 1);
-
   --green-1: hsla(180, 100%, 30%, 1);
-
   --background-1: hsla(210, 38%, 90%, 1);
   --background-2: hsla(210, 38%, 95%, 1);
-
   --thickness: 8px;
-
   --dim-hue: 265;
   --min-hue: 225;
   --maj-hue: 23;
   --aug-hue: 39;
-
   --keep-it-100: 100%;
-
   --dim: hsla(var(--dim-hue), var(--keep-it-100), 50%, 1);
   --min: hsla(var(--min-hue), var(--keep-it-100), 50%, 1);
   --maj: hsla(var(--maj-hue), var(--keep-it-100), 45%, 1);
   --aug: hsla(var(--aug-hue), var(--keep-it-100), 45%, 1);
-}
-
-html {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+  --heading-font: 'montserrat', sans-serif;
+  --text-font: 'open sans', sans-serif;
 }
 
 html, body {
@@ -44,6 +32,7 @@ html, body {
   overscroll-behavior: none;
   color: black;
   background: var(--background-1);
+  font-family: var(--text-font);
 }
 
 body {
@@ -51,7 +40,6 @@ body {
 	grid-template-columns: 1fr;
   grid-template-rows: 1fr;
 }
-
 
 a {
   color: inherit;
@@ -67,7 +55,7 @@ button {
   background-color: #2B6BC2;
   box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.1);
   font-family: var(--fonts);
-  font-size: calc(10px + (14 - 10) * ((100vw - 300px) / (1600 - 300)));;
+  font-size: calc(10px + (14 - 10) * ((100vw - 300px) / (1600 - 300)));
   line-height: 1;
   font-weight: 400;
   color: #fff;

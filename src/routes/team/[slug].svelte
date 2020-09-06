@@ -146,6 +146,12 @@ img {
   z-index: 0;
 }
 
+.name {
+  font-family: var(--heading-font);
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
 h1 {
   font-size: calc(24px + (32 - 24) * ((100vw - 300px) / (1600 - 300)));
   color: black;

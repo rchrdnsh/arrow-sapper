@@ -7,6 +7,7 @@
 </script>
 
 <script>
+	export let segment;
   export let team;
 	import { fadeIn, fadeOut } from "../../animate";
 </script>
@@ -28,7 +29,6 @@
   nav {
 		grid-row: 1 / 2;
 		grid-column: 1 / 2;
-		box-sizing: border-box;
 		margin: 0;
 		padding: 0;
 		width: 100%;
@@ -42,35 +42,44 @@
 	ul {
 		margin: 0;
 		padding: 0;
+		width: 100%;
+		/* height: 100%; */
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		align-items: stretch;
+		justify-content: stretch;
 		list-style-type: none;	
 	}
 
 	li {
 		color: black;
+		margin: 0;
+		padding: 0.25rem;
+		display: grid;
+		grid-template-rows: 1fr;
+		grid-template-columns: 1fr;
+		align-items: stretch;
+		justify-items: stretch;
 	}
 
-	/* [aria-current] {
-		position: relative;
-		display: inline-block;
-	} */
-
-	/* [aria-current]::after {
-		position: absolute;
-		content: '';
-		width: calc(100% - 1em);
-		height: 2px;
-		background-color: rgb(255,62,0);
-		display: block;
-		bottom: -1px;
-	} */
-
 	a {
+		grid-row: 1 / 2;
+		grid-column: 1 / 2;
+		margin: 0;
+		padding: 1rem 0;
+		width: 100%;
+		height: 100%;
 		text-decoration: none;
-		padding: 1em 0.5em;
-		display: block;
+		text-align: center;
+		display: grid;
+		align-self: stretch;
+		justify-self: stretch;
+		border-radius: 12px;
+	}
+
+	.selected {
+		background: var(--blue-2);
+		color: white;
 	}
 
 	main {
@@ -87,13 +96,19 @@
 <div class='app' in:fadeIn out:fadeOut>
 	<nav>
 		<ul>
-      {#each team as member}
-        <li>
-          <a rel="prefetch" href="team/{member.slug}">{member.name}</a>
-        </li>
-      {/each}
+			{#each team as member}
+				<li>
+					<a
+						rel='prefetch'
+						class={segment === `${member.slug}` ? `selected` : ``}
+						href='team/{member.slug}'
+					>
+						{member.name}
+					</a>
+				</li>
+			{/each}
 		</ul>
-  </nav>
+	</nav>
 	<main>
 		<slot></slot>
 	</main>

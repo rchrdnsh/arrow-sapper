@@ -29,7 +29,7 @@
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    background: hsla(210, 38%, 95%, 1);
+    background: var(--background-2);
     border-radius: 0 8px 8px 0;
     box-shadow:
       0 2.8px 2.2px rgba(0, 0, 0, 0.028),

@@ -112,7 +112,7 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 300;
-    color: #2B6BC2;
+    color: var(--blue-1);
   }
 
   .content {

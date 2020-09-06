@@ -19,14 +19,7 @@
     padding: 8vw;
   }
 
-  .title {
-    color: black;
-  }
-
   .content-card {
-    /* border: 1px solid #ddd; */
-    
-    /* box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.1); */
     margin: 0;
     padding: 0;
     border-radius: 8px;
@@ -227,17 +220,15 @@
 
 <div class='container' in:fadeIn out:fadeOut>
 
-  <h1 class='title'>here are the people that do the stuff for you.</h1>
-
   <div class="content-grid">
 
     {#each team as member}
-      <a rel='prefetch' href="team/{member.slug}" class="content-card">
-        <img class="picture" src={member.picture} alt={member.alt}/>
-        <div class="scrim"/>
-        <div class="text">
-          <h1 class="name">{member.name}</h1>
-          <h2 class="position">{member.position}</h2>
+      <a rel='prefetch' href='team/{member.slug}' class='content-card'>
+        <img class='picture' src={member.picture} alt={member.alt}/>
+        <div class='scrim'/>
+        <div class='text'>
+          <h1 class='name'>{member.name}</h1>
+          <h2 class='position'>{member.position}</h2>
           <button>More...</button>
         </div>
       </a>

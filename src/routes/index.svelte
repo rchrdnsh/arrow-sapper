@@ -23,8 +23,7 @@
 		display: black;
 		grid-column: 2 / 3;
 		color: var(--blue-1);
-		font-family: var(--fonts);
-		font-family: 'montserrat', sans-serif;
+		font-family: var(--heading-font);
 		font-weight: 400;
 		text-transform: uppercase;
 	}
@@ -33,8 +32,7 @@
 		display: block;
 		grid-column: 2 / 3;
 		line-height: 2;
-		font-family: var(--fonts);
-		font-family: sans-serif;
+		font-family: var(--text-font);
 		font-weight: 400;
 	}
 </style>
