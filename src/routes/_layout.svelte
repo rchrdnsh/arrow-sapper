@@ -50,7 +50,7 @@
 						class={segment === link.path ? `selected` : ``}
 						href={link.path === undefined ? `` : link.path}
 					>
-						{link.path === undefined ? `Home` : capitalize(link.path)}
+						<p>{link.path === undefined ? `Home` : capitalize(link.path)}</p>
 						{#if index == active}
 							<span in:receive={{ key: 'active' }} out:send={{ key: 'active' }}></span>
 						{/if}
@@ -125,68 +125,72 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		justify-content: center;
 	}
 
 	ul {
 		margin: 0;
 		padding: 0;
 		width: 100%;
-		/* height: 100%; */
+		height: 100%;
 		display: flex;
 		flex-direction: column;
-		align-items: stretch;
-		justify-content: stretch;
-		list-style-type: none;	
+		align-items: center;
+		justify-content: center;
+		list-style-type: none;
+		/* border: 1px solid rgb(121, 0, 0); */
 	}
 
 	li {
 		color: black;
 		margin: 0;
-		padding: 0.3rem;
+		padding: 0;
+		width: 4rem;
+		height: 4rem;
 		display: grid;
 		grid-template-rows: 1fr;
 		grid-template-columns: 1fr;
-		align-items: stretch;
-		justify-items: stretch;
+		/* border: 1px solid red; */
 	}
 
 	a {
 		grid-row: 1 / 2;
 		grid-column: 1 / 2;
 		margin: 0;
-		padding: 1rem 0;
-		width: 100%;
-		height: 100%;
+		padding: 0;
 		text-decoration: none;
 		text-align: center;
 		display: grid;
-		align-self: stretch;
-		justify-self: stretch;
-		border-radius: 12px;
-		z-index: 1;
-		position: relative;
-		transition: color 100ms;
+		grid-template-rows: 1fr;
+		grid-template-columns: 1fr;
+		/* border: 1px solid orange; */
 	}
 
-	.selected {
-		/* background: var(--blue-1); */
-		/* color: white; */
+	/* .selected {
+		background: var(--blue-1);
+		color: white;
+	} */
+
+	p {
+		grid-row: 1 / 2;
+		grid-column: 1 / 2;
+		align-self: center;
+		justify-self: center;
+		margin: 0;
+		padding: 0;
+		line-height: 1;
+		z-index: 5;
+		/* border: 1px solid green; */
 	}
 
 	span {
-		/* grid-row: 1 / 2; */
-		/* grid-column: 1 / 2; */
-		position: absolute;
-		pointer-events: none;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
+		grid-row: 1 / 2;
+		grid-column: 1 / 2;
 		background: hsla(173, 100%, 40%, 1);
-		z-index: -1;
+		z-index: 4;
+		align-self: stretch;
+		justify-self: stretch;
 		border-radius: 12px;
-		box-shadow: 2px 2px 8px hsla(0,0%,0%,0.25);
-
 	}
 
 	main {
