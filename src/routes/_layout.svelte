@@ -186,6 +186,7 @@
 		display: grid;
 		grid-template-rows: 1fr;
 		grid-template-columns: 1fr;
+		-webkit-tap-highlight-color: transparent;
 		/* border: 1px solid orange; */
 	}
 
