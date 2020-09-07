@@ -33,8 +33,7 @@
 		{ path: `about`},
 		{ path: `tours`},
 		{ path: `team`},
-		{ path: `test`},
-		{ path: `buttons`},
+		{ path: `test`}
 	]
 </script>
 
@@ -107,11 +106,19 @@
 		width: 100%;
 		height: 100%;
 		display: grid;
-		grid-template-columns: 6rem calc(100vw - 6rem);
 		grid-template-columns: 6rem 1fr;
+		grid-template-columns: 6rem calc(100vw - 6rem);
 		grid-template-rows: 1fr;
 		column-gap: var(--thickness);
 		border: var(--thickness) solid var(--background-1);
+	}
+
+	@media screen and (orientation: portrait) {
+		.app {
+			grid-template-columns: 1fr;
+			grid-template-rows: 6fr 1fr;
+			grid-template-rows: 1fr 6rem;
+		}
 	}
 
 	nav {
@@ -128,6 +135,14 @@
 		justify-content: center;
 	}
 
+	@media screen and (orientation: portrait) {
+		nav {
+			grid-row: 2 / 3;
+			grid-column: 1 / 2;
+			flex-direction: row;
+		}
+	}
+
 	ul {
 		margin: 0;
 		padding: 0;
@@ -139,6 +154,14 @@
 		justify-content: center;
 		list-style-type: none;
 		/* border: 1px solid rgb(121, 0, 0); */
+	}
+
+	@media screen and (orientation: portrait) {
+		ul {
+			flex-direction: row;
+			justify-content: space-around;
+			padding: 0 0.4rem;
+		}
 	}
 
 	li {
@@ -190,7 +213,7 @@
 		z-index: 4;
 		align-self: stretch;
 		justify-self: stretch;
-		border-radius: 12px;
+		/* border-radius: 12px; */
 	}
 
 	main {
@@ -205,6 +228,16 @@
 		border: var(--thickness) solid var(--blue-1);
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
+	}
+
+	@media screen and (orientation: portrait) {
+		main {
+			grid-row: 1 / 2;
+			grid-column: 1 / 2;
+			height: 82vh;
+			height: calc(100vh - ((var(--thickness) * 3) + 6rem));
+			/* height: calc( calc(var(--vw, 1vw) * 100) - ( (var(--thickness) * 3) + 6rem ) ); */
+		}
 	}
 </style>
 

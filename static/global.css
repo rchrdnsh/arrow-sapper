@@ -28,6 +28,7 @@ html, body {
   padding: 0;
   width: 100vw;
   height: 100vh;
+  /* height: calc(var(--vw, 1vw) * 100); */
   overflow: hidden;
   overscroll-behavior: none;
   color: black;
