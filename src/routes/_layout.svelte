@@ -31,9 +31,9 @@
 	let links = [
 		{ path: undefined},
 		{ path: `about`},
+		{ path: `services`},
 		{ path: `tours`},
-		{ path: `team`},
-		{ path: `test`}
+		{ path: `team`}		
 	]
 </script>
 
@@ -107,7 +107,7 @@
 		height: 100%;
 		display: grid;
 		grid-template-columns: 6rem 1fr;
-		grid-template-columns: 6rem calc(100vw - 6rem);
+		/* grid-template-columns: 6rem calc(100vw - 6rem); */
 		grid-template-rows: 1fr;
 		column-gap: var(--thickness);
 		border: var(--thickness) solid var(--background-1);
@@ -236,7 +236,7 @@
 			grid-column: 1 / 2;
 			height: 82vh;
 			height: calc(100vh - ((var(--thickness) * 3) + 6rem));
-			/* height: calc( calc(var(--vw, 1vw) * 100) - ( (var(--thickness) * 3) + 6rem ) ); */
+			height: calc( calc(var(--vh, 1vh) * 100) - ( (var(--thickness) * 3) + 6rem ) );
 		}
 	}
 </style>
