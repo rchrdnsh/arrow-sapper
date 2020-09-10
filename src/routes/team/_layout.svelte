@@ -7,9 +7,13 @@
 </script>
 
 <script>
+	import { fadeIn, fadeOut } from "../../animate";
+	import Navigation from '../../components/Navigation.svelte'
+
 	export let segment;
   export let team;
-	import { fadeIn, fadeOut } from "../../animate";
+
+	let links = team.map(member => member.slug);
 </script>
 
 <style>
@@ -94,7 +98,10 @@
 </style>
 
 <div class='app' in:fadeIn out:fadeOut>
-	<nav>
+
+	<Navigation {segment} primary={`team`} secondary links={links}/>
+
+	<!-- <nav>
 		<ul>
 			{#each team as member}
 				<li>
@@ -108,7 +115,8 @@
 				</li>
 			{/each}
 		</ul>
-	</nav>
+	</nav> -->
+
 	<main>
 		<slot></slot>
 	</main>

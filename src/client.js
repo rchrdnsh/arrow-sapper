@@ -15,10 +15,10 @@ window.addEventListener('resize', () => {
 	document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
 
-console.log(window.innerHeight);
-console.log(document.body.scrollHeight);
-console.log(window.innerWidth);
-console.log(window.visualViewport);
-console.log(window.devicePixelRatio);
+// console.log(window.innerHeight);
+// console.log(document.body.scrollHeight);
+// console.log(window.innerWidth);
+// console.log(window.visualViewport);
+// console.log(window.devicePixelRatio);
 
-console.log(vh * 100);
+// console.log(vh * 100);

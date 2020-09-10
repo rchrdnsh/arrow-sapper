@@ -1,5 +1,6 @@
 <script>
 	import { fadeIn, fadeOut } from "../animate";
+	import Tabs from '../components/Tabs.svelte'
 </script>
 
 <style>
@@ -22,4 +23,6 @@
 <div class='container' in:fadeIn out:fadeOut>
 	<h1>About this site</h1>
 	<p>This is the 'about' page. There's not much here.</p>
+	<Tabs items={[ `How`, `Are`, `You`, `Today?` ]}/>
 </div>
+

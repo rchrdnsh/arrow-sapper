@@ -112,6 +112,7 @@
 </style>
 
 <div class='container' in:fadeIn out:fadeOut>
+
   <div>
       <p>{currentNote} {capitalize(currentChord)}</p>
       <button
@@ -121,6 +122,7 @@
         Reset
       </button>
   </div>
+
   <div>
     {#each notes as note}
       <button
@@ -135,6 +137,7 @@
       </button>
     {/each}
   </div>
+
   <div>
     {#each chords as chord}
       <button
@@ -150,4 +153,5 @@
       </button>
     {/each}
   </div>
+  
 </div>
