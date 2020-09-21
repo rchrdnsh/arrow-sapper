@@ -35,7 +35,8 @@
 		{ path: `about`},
 		{ path: `services`},
 		{ path: `tours`},
-		{ path: `team`}		
+		{ path: `team`},
+		{path: `contact`}		
 	]
 </script>
 
@@ -200,7 +201,7 @@
 
 <div class='app'>
 
-	<Navigation {segment} links={[undefined, `about`,`services`,`tours`,`team`]}/>
+	<Navigation {segment} links={[undefined, `about`,`services`,`tours`,`team`, `work`, `contact`]}/>
 
 	<!-- <nav>
 		{#each links as link, index}

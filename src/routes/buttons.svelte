@@ -3,8 +3,12 @@
   
   let notes = [`C`, `C#/Db`, `D`, `D#/Eb`, `E`, `F`, `F#/Gb`, `G`, `G#/Ab`, `A`, `A#/Bb`, `B`]
   let currentNote = ``
+
   let chords = [`diminished`, `minor`, `major`, `augmented`]
   let currentChord = ``
+
+  let extensions = [`triad`, `7th`]
+  let currentExtension = ``
 
   function capitalize(word) {
     const lower = word.toLowerCase()
@@ -39,6 +43,7 @@
     outline: none;
     border: none;
     transition: none;
+    text-transform: capitalize;
     margin: 0;
     padding: 0;
     width: 4rem;
@@ -114,10 +119,11 @@
 <div class='container' in:fadeIn out:fadeOut>
 
   <div>
-      <p>{currentNote} {capitalize(currentChord)}</p>
+      <p>{capitalize(currentNote)} {capitalize(currentChord)} {capitalize(currentExtension)}</p>
       <button
         on:click={() => currentNote = ``}
         on:click={() => currentChord = ``}
+        on:click={() => currentExtension = ``}
       >
         Reset
       </button>
@@ -150,6 +156,38 @@
         on:click={() => currentChord = chord}
       >
         {chord}
+      </button>
+    {/each}
+  </div>
+
+  <div>
+    {#each chords as chord}
+      <button
+        class="chord"
+        class:diminished={chord === `diminished`}
+        class:minor={chord === `minor`}
+        class:major={chord === `major`}
+        class:augmented={chord === `augmented`}
+        class:active={currentChord === chord}
+        on:click={() => currentChord = chord}
+        on:click={() => currentExtension = `triad`}
+      >
+        {chord} Triad
+      </button>
+    {/each}
+  </div>
+
+  <div>
+    {#each extensions as extension}
+      <button
+        class:diminished={currentChord === `diminished`}
+        class:minor={currentChord === `minor`}
+        class:major={currentChord === `major`}
+        class:augmented={currentChord === `augmented`}
+        class:active={currentExtension === extension}
+        on:click={() => currentExtension = extension}
+      >
+        {extension}
       </button>
     {/each}
   </div>
