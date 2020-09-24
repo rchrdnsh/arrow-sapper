@@ -18,6 +18,12 @@
     background: #aaa;
   }
 
+  @media screen and (orientation: portrait) {
+    .container {
+      height: calc(90vh - (4 * var(--thickness)));
+    }
+  }
+
   .text {
     grid-row: 2 / 8;
     grid-column: 7 / 12;

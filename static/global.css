@@ -39,7 +39,7 @@ html, body {
   overflow: hidden;
   overscroll-behavior: none;
   color: black;
-  background: var(--background-1);
+  /* background: var(--background-1); */
   background: white;
   font-family: var(--text-font);
 }
