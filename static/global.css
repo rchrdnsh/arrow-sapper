@@ -10,6 +10,7 @@
   --background-1: hsla(210, 38%, 90%, 1);
   --background-2: hsla(210, 38%, 95%, 1);
   --thickness: 8px;
+  --thickness-2: 4px;
   --dim-hue: 265;
   --half-dim-hue: 255;
   --min-hue: 225;
@@ -39,6 +40,7 @@ html, body {
   overscroll-behavior: none;
   color: black;
   background: var(--background-1);
+  background: white;
   font-family: var(--text-font);
 }
 

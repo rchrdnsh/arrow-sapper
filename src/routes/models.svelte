@@ -9,16 +9,12 @@
 	}
 
   model-viewer {
-    width: 90%;
-    height: 90%;
-    border: 8px solid var(--blue-2);
+    width: 100%;
+    height: 100%;
+    /* border: 8px solid var(--blue-2); */
     background: rgb(255,255,255);
     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(158,188,208,1) 100%);
   }
-
-  /* model-viewer::part(.container) {
-    outline: none;
-  } */
 </style>
 
 

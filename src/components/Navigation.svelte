@@ -54,10 +54,15 @@
 		grid-row: 1 / 2;
 		grid-column: 1 / 2;
 		margin: 0;
-		padding: 0.5rem;
+		padding: 0;
 		width: 100%;
 		height: 100%;
 		border: var(--thickness) solid var(--blue-1);
+		border: var(--thickness-2) solid var(--blue-1);
+		border: none;
+		/* background: white; */
+		background: var(--background-1);
+		box-shadow: inset 0px 0px 16px hsla(0,0%,0%,0.1);
 		display: flex;
 		flex-direction: column;
 		align-items: stretch;

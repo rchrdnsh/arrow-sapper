@@ -54,7 +54,9 @@
 		/* grid-template-columns: 6rem calc(100vw - 6rem); */
 		grid-template-rows: 1fr;
 		column-gap: var(--thickness);
+		/* column-gap: var(--thickness-2); */
 		border: var(--thickness) solid var(--background-1);
+		border: var(--thickness) solid hsla(360, 100%, 100%, 1);
 	}
 
 	@media screen and (orientation: portrait) {
@@ -184,6 +186,11 @@
 		height: 90vh;
 		height: calc(100vh - (var(--thickness) * 2));
 		border: var(--thickness) solid var(--blue-1);
+		height: calc(100vh - (var(--thickness) * 2));
+		border: var(--thickness-2) solid var(--blue-1);
+		box-shadow: inset 0px 0px 16px hsla(0,0%,0%,0.1);
+		background: var(--background-1);
+		border: none;
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
 	}
@@ -203,7 +210,7 @@
 
 	<!-- <Navigation {segment} links={[undefined, `about`,`services`,`tours`,`team`, `work`, `contact`, `models`]}/> -->
 
-	<Navigation {segment} links={[undefined, `about`,`services`, `contact`, `models`]}/>
+	<Navigation rel='prefetch' {segment} links={[undefined, `about`,`services`, `contact`, `models`]}/>
 
 	<!-- <nav>
 		{#each links as link, index}
