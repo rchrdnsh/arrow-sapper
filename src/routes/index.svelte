@@ -67,7 +67,7 @@
 	<h1>Goals</h1>
 
 	<p>Our goal is to help your business attain public relations marketing and prowess in a competitive global landscape with a team of public relations directors, business development managers, technical engineers, visual designers and creative consultants. We will assist your business in drafting necessary business strategies, developing, structuring and optimizing your business to work in the most efficient manner possible.</p>
-	
+
 </div>
 
 

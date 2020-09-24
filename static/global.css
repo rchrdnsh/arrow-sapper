@@ -11,12 +11,16 @@
   --background-2: hsla(210, 38%, 95%, 1);
   --thickness: 8px;
   --dim-hue: 265;
+  --half-dim-hue: 255;
   --min-hue: 225;
+  --dom-hue: 10;
   --maj-hue: 23;
   --aug-hue: 39;
   --keep-it-100: 100%;
   --dim: hsla(var(--dim-hue), var(--keep-it-100), 50%, 1);
+  --half-dim: hsla(var(--half-dim-hue), var(--keep-it-100), 50%, 1);
   --min: hsla(var(--min-hue), var(--keep-it-100), 50%, 1);
+  --dom: hsla(var(--dom-hue), var(--keep-it-100), 50%, 1);
   --maj: hsla(var(--maj-hue), var(--keep-it-100), 45%, 1);
   --aug: hsla(var(--aug-hue), var(--keep-it-100), 45%, 1);
   --heading-font: 'montserrat', sans-serif;
