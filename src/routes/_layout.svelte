@@ -201,7 +201,9 @@
 
 <div class='app'>
 
-	<Navigation {segment} links={[undefined, `about`,`services`,`tours`,`team`, `work`, `contact`]}/>
+	<!-- <Navigation {segment} links={[undefined, `about`,`services`,`tours`,`team`, `work`, `contact`, `models`]}/> -->
+
+	<Navigation {segment} links={[undefined, `about`,`services`, `contact`, `models`]}/>
 
 	<!-- <nav>
 		{#each links as link, index}
