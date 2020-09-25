@@ -9,7 +9,7 @@
 			const transform = style.transform === "none" ? "" : style.transform;
 
 			return {
-				duration: 250,
+				duration: 0,
 				easing: quintOut,
 				css: (t) => `
 					transform: ${transform} scale(${t});
@@ -39,7 +39,8 @@
 		/* width: max-content; */
 		width: auto;
 		height: min-content;
-    background: #555;
+		background: #555;
+		background: var(--blue-0);
     border-radius: 64px;
 		/* display: grid; */
 		/* grid-auto-flow: column; */
@@ -87,8 +88,8 @@
 		grid-column: 1 / 4;
 		margin: 0;
 		padding: 0;
-		background: hsla(173, 100%, 40%, 1);
-    background: #777;
+		background: hsla(173, 100%, 30%, 1);
+    /* background: #777; */
     box-shadow: 0px 0px 8px hsla(0, 0%, 0%, 0.25);
 		z-index: 4;
 		align-self: stretch;

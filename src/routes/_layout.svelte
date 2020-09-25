@@ -7,13 +7,13 @@
 	export let segment;
 
 	const [send, receive] = crossfade({
-		duration: d => Math.sqrt(d * 500),
+		duration: d => Math.sqrt(d * 250),
 		fallback(node, params) {
 			const style = getComputedStyle(node);
 			const transform = style.transform === "none" ? "" : style.transform;
 
 			return {
-				duration: 500,
+				duration: 0,
 				easing: quintOut,
 				css: (t) => `
 					transform: ${transform} scale(${t});
@@ -63,7 +63,7 @@
 		.app {
 			grid-template-columns: 1fr;
 			grid-template-rows: 6fr 1fr;
-			grid-template-rows: 1fr 6rem;
+			grid-template-rows: 1fr 4rem;
 		}
 	}
 
@@ -201,7 +201,7 @@
 			grid-column: 1 / 2;
 			height: 82vh;
 			height: calc(100vh - ((var(--thickness) * 3) + 6rem));
-			height: calc( calc(var(--vh, 1vh) * 100) - ( (var(--thickness) * 3) + 6rem ) );
+			height: calc( calc(var(--vh, 1vh) * 100) - ( (var(--thickness) * 3) + 4rem ) );
 		}
 	}
 </style>

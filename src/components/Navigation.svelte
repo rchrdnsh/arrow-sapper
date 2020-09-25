@@ -7,13 +7,13 @@
   export let secondary = false;
 
 	const [send, receive] = crossfade({
-		duration: d => Math.sqrt(d * 500),
+		duration: d => Math.sqrt(d * 250),
 		fallback(node, params) {
 			const style = getComputedStyle(node);
 			const transform = style.transform === "none" ? "" : style.transform;
 
 			return {
-				duration: 500,
+				duration: 0,
 				easing: quintOut,
 				css: (t) => `
 					transform: ${transform} scale(${t});
@@ -35,16 +35,6 @@
     }
     return frags.join(' ');
   }
-
-	// let active = 0;
-
-	// let links = [
-	// 	{ path: undefined},
-	// 	{ path: `about`},
-	// 	{ path: `services`},
-	// 	{ path: `tours`},
-	// 	{ path: `team`}		
-  // ]
   
   export let links;
 </script>
@@ -62,6 +52,7 @@
 		border: none;
 		/* background: white; */
 		background: var(--background-1);
+		background: var(--blue-0);
 		box-shadow: inset 0px 0px 16px hsla(0,0%,0%,0.1);
 		display: flex;
 		flex-direction: column;
@@ -131,6 +122,7 @@
 		grid-template-rows: 1fr;
 		grid-template-columns: 1fr;
 		-webkit-tap-highlight-color: transparent;
+		color: white;
 	}
 
 	@media screen and (orientation: landscape) {
@@ -153,13 +145,15 @@
 		padding: 0;
 		line-height: 1;
 		z-index: 5;
+		text-shadow: 1px 1px 2px hsla(0, 0%, 0%, 0.25);
 		/* border: 1px solid green; */
 	}
 
 	span {
 		grid-row: 1 / 2;
 		grid-column: 1 / 2;
-		background: hsla(173, 100%, 40%, 1);
+		background: hsla(173, 100%, 30%, 1);
+		box-shadow: 0px 0px 8px hsla(0, 0%, 0%, 0.25);
 		z-index: 4;
 		align-self: stretch;
 		justify-self: stretch;

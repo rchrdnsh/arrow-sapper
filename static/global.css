@@ -3,9 +3,11 @@
 }
 
 :root {
+  --blue-0: hsla(215, 64%, 35%, 1);
   --blue-1: hsla(215, 64%, 50%, 1);
   --blue-2: hsla(215, 64%, 65%, 1);
   --blue-3: hsla(215, 64%, 80%, 1);
+  --green-0: hsla(180, 100%, 20%, 1);
   --green-1: hsla(180, 100%, 30%, 1);
   --background-1: hsla(210, 38%, 90%, 1);
   --background-2: hsla(210, 38%, 95%, 1);
