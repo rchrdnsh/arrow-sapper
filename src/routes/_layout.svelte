@@ -1,43 +1,6 @@
 <script>
-	import { quintOut } from 'svelte/easing';
-	import { crossfade } from 'svelte/transition';
-
 	import Navigation from '../components/Navigation.svelte'
-
-	export let segment;
-
-	const [send, receive] = crossfade({
-		duration: d => Math.sqrt(d * 250),
-		fallback(node, params) {
-			const style = getComputedStyle(node);
-			const transform = style.transform === "none" ? "" : style.transform;
-
-			return {
-				duration: 0,
-				easing: quintOut,
-				css: (t) => `
-					transform: ${transform} scale(${t});
-					opacity: ${t};
-				`,
-			};
-		},
-	});
-
-	const capitalize = (word) => {
-    const lower = word.toLowerCase()
-    return word.charAt(0).toUpperCase() + lower.slice(1)
-  }
-
-	let active = 0;
-
-	let links = [
-		{ path: undefined},
-		{ path: `about`},
-		{ path: `services`},
-		{ path: `tours`},
-		{ path: `team`},
-		{path: `contact`}		
-	]
+	export let segment
 </script>
 
 <style>
@@ -210,8 +173,6 @@
 
 	<!-- <Navigation {segment} links={[undefined, `about`,`services`,`tours`,`team`, `work`, `contact`, `models`]}/> -->
 
-	<Navigation {segment} links={[undefined, `about`, `services`, `contact`, `models`]}/>
-
 	<!-- <nav>
 		{#each links as link, index}
 			<a
@@ -277,6 +238,17 @@
 			</li>
 		</ul>
 	</nav> -->
+
+	<Navigation
+		{segment}
+		links={[
+			undefined,
+			`about`,
+			`services`,
+			`contact`,
+			`models`
+		]}
+	/>
 
 	<main>
 		<slot></slot>

@@ -130,12 +130,7 @@
 			height: 4rem;
 		}
 	}
-
-	/* .selected {
-		background: var(--blue-1);
-		color: white;
-	} */
-
+	
 	p {
 		grid-row: 1 / 2;
 		grid-column: 1 / 2;
@@ -146,7 +141,6 @@
 		line-height: 1;
 		z-index: 5;
 		text-shadow: 1px 1px 2px hsla(0, 0%, 0%, 0.25);
-		/* border: 1px solid green; */
 	}
 
 	span {
@@ -157,12 +151,11 @@
 		z-index: 4;
 		align-self: stretch;
 		justify-self: stretch;
-		/* border-radius: 12px; */
 	}
 </style>
 
 <nav>
-  {#each links as link, index}
+  {#each links as link}
     {#if secondary === true}
       <a
         class={segment === link ? `selected` : ``}
