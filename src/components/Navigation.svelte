@@ -171,7 +171,6 @@
   {#each links as link, index}
     {#if secondary === true}
       <a
-        rel='prefetch'
         class={segment === link ? `selected` : ``}
         href={`${primary}/${link}`}
       >
@@ -182,7 +181,6 @@
       </a>
     {:else}
       <a
-        rel='prefetch'
         class={segment === link ? `selected` : ``}
         href={link === undefined ? `` : link}
       >

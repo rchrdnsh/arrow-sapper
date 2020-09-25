@@ -3,13 +3,13 @@
 	import { crossfade } from 'svelte/transition';
 
 	const [send, receive] = crossfade({
-		duration: d => Math.sqrt(d * 500),
+		duration: d => Math.sqrt(d * 250),
 		fallback(node, params) {
 			const style = getComputedStyle(node);
 			const transform = style.transform === "none" ? "" : style.transform;
 
 			return {
-				duration: 500,
+				duration: 250,
 				easing: quintOut,
 				css: (t) => `
 					transform: ${transform} scale(${t});

@@ -41,7 +41,7 @@
 	<title>Sapper project template</title>
 </svelte:head>
 
-<div class='container' in:fadeIn out:fadeOut>
+<div class='container'>
 
 	<Title
 		image='img/arrow-create-1920x1200.jpg'

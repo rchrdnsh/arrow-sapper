@@ -20,18 +20,18 @@
 
 <div class='container'>
 
-  <!-- <model-viewer
+  <model-viewer
     src='models/DamagedHelmet/DamagedHelmet.gltf'
     alt='A 3D model.'
     auto-rotate
     camera-controls
-  ></model-viewer> -->
+  ></model-viewer>
 
-  <model-viewer
+  <!-- <model-viewer
     src='models/sneaker-2/scene.gltf'
     alt='A 3D model.'
     auto-rotate
     camera-controls
-  ></model-viewer>
+  ></model-viewer> -->
 
 </div>

@@ -1,5 +1,5 @@
 <script>
-  import { fadeIn, fadeOut } from "../animate";
+  // import { fadeIn, fadeOut } from "../animate";
   import Featured from '../components/Featured.svelte'
 
   let features = [
@@ -36,7 +36,7 @@
 	}
 </style>
 
-<div class='container' in:fadeIn out:fadeOut>
+<div class='container'>
   {#each features as { id, title, description, image, background }}
     <Featured
       reverse={ id % 2 === 0 ? true : false }

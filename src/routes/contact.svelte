@@ -1,5 +1,5 @@
 <script>
-	import { fadeIn, fadeOut } from "../animate";
+	// import { fadeIn, fadeOut } from "../animate";
 </script>
 
 <style>
@@ -183,7 +183,7 @@
 	<title>Contact</title>
 </svelte:head>
 
-<div class='container' in:fadeIn out:fadeOut>
+<div class='container'>
   <div class='contact-box'>
     <div class='contact-info'>
       <h1>Contact Info</h1>
