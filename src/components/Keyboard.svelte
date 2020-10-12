@@ -1,38 +1,77 @@
 <script>
+  import { fade } from 'svelte/transition';
+
   export let octaves;
   export let notes;
+  export let toggleNotes;
 
-  let keys = {
-    Zone1: {
-      WhiteKeys: {
-        Note1: [`B#`, `C`],
-        Note2: [`D`],
-        Note3: [`E`, `Fb`]
-      },
-      BlackKeys: {
-        Note1: [`C#`, `Db`],
-        Note2: [`D#`, `Eb`]
-      }
+  let qualities = [`aug`, `P`, `ma`, `mi`, `dim`];
+
+  let zones = [
+    {
+      number: 1,
+      keys: [
+        {
+          color: `white`,
+          names: [
+            {id: 1, name: [`C`, `B#`, `Dbb`]},
+            {id: 2, name: [`D`, `Cx`, `Ebb`]},
+            {id: 3, name: [`E`, `Dx`, `Fb`]}
+          ]
+        },
+        {
+          color: `black`,
+          names: [
+            {id: 1, name: [`C#`, `Db`]},
+            {id: 2, name: [`D#`, `Eb`]}
+          ]
+        }
+      ]
     },
-    Zone2: {
-      WhiteKeys: {
-        Note1: [`E#`, `F`],
-        Note2: [`G`],
-        Note3: [`A`],
-        Note4: [`B`, `Cb`]
-      },
-      'black-keys': {
-        'note-1': 'F#/Gb',
-        'note-2': 'G#/Ab',
-        'note-2': 'A#/Bb',
-      }
+    {
+      number: 2,
+      keys: [
+        {
+          color: `white`,
+          names: [
+            {id: 1, name: [`F`, `E#`, `Gbb`]},
+            {id: 2, name: [`G`, `Fx`, `Abb`]},
+            {id: 3, name: [`A`, `Gx`, `Bbb`]},
+            {id: 4, name: [`B`, `Ax`, `Cb`]}
+          ]
+        },
+        {
+          color: `black`,
+          names: [
+            {id: 1, name: [`F#`, `Gb`, `Ex`]},
+            {id: 2, name: [`G#`, `Ab`]},
+            {id: 3, name: [`A#`, `Bb`, `Cbb`]}
+          ]
+        }
+      ]
     }
-  }
+  ]
 
-  let Zone1WhiteKeys = [`C`, `D`, `E`]
-  let Zone1BlackKeys = [`Db C#`, `Eb D#`]
-  let Zone2WhiteKeys = [`F`, `G`, `A`, `B`]
-  let Zone2BlackKeys = [`Gb F#`, `Ab G#`, `Bb Ab`]
+  let Zone1WhiteKeys = [
+    {id: 1, name: [`C`, `B#`]},
+    {id: 2, name: [`D`]},
+    {id: 3, name: [`E`, `Dx`, `Fb`]}
+  ];
+  let Zone1BlackKeys = [
+    {id: 1, name: [`C#`, `Db`]},
+    {id: 2, name: [`D#`, `Eb`]}
+  ];
+  let Zone2WhiteKeys = [
+    {id: 1, name: [`F`, `E#`, `Gbb`]},
+    {id: 2, name: [`G`, `Fx`, `Abb`]},
+    {id: 3, name: [`A`, `Gx`, `Bbb`]},
+    {id: 4, name: [`B`, `Ax`, `Cb`]}
+  ];
+  let Zone2BlackKeys = [
+    {id: 1, name: [`F#`, `Gb`, `Ex`]},
+    {id: 2, name: [`G#`, `Ab`]},
+    {id: 3, name: [`A#`, `Bb`, `Cbb`]}
+  ];
 </script>
 
 
@@ -179,9 +218,21 @@
   grid-template-columns: 1fr;
   align-items: end;
   justify-items: center;
-  color: black;
-  /* font-family: 'Share Tech', 'odachi', sans-serif; */
+  color: #999;
+  font-family: 'Share Tech', 'odachi', sans-serif;
   font-size: 24px;
+  transition: all 500ms ease;
+}
+
+.white-key > p {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Share Tech', 'odachi', sans-serif;
 }
 
 @media (orientation: portrait) {
@@ -211,9 +262,10 @@
   grid-template-columns: 1fr;
   align-items: end;
   justify-items: center;
-  color: white;
-  /* font-family: 'Share Tech', 'Odachi', 'Avenir Next Condensed', sans-serif; */
+  color: #999;
+  font-family: 'Share Tech', 'Odachi', 'Avenir Next Condensed', sans-serif;
   font-size: 12px;
+  transition: all 500ms ease;
 }
 
 .black-key:nth-child(1) {
@@ -229,12 +281,35 @@
 }
 
 .black-key > p {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
   margin: 0;
   padding: 0;
-  font-family: 'Share Tech', 'Odachi', 'Avenir Next Condensed';
+  font-family: 'Share Tech', 'Odachi', 'Avenir Next Condensed', sans-serif;
   writing-mode: vertical-lr;
   -webkit-text-orientation: upright;
   text-orientation: upright;
+}
+
+.black-key > .stack {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid red; */
+}
+
+.black-key > .stack > p {
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0px;
+  text-align: center;
+  line-height: 1.25;
+  font-size: 14px;
+  padding: 0 0 0.25rem 0;
 }
 
 @media(orientation: portrait) {
@@ -253,7 +328,9 @@
     border-top: 0;
     }
 
-    .black-key > p {
+    .black-key > p { 
+      grid-row: 1 / 2;
+      grid-column: 1 / 2;
       writing-mode: horizontal-tb;
       letter-spacing: 0px;
       text-align: center;
@@ -380,67 +457,130 @@
 
 <div class='container'>
   {#each octaves as octave}
-    <div class='octave reset'>
-      <div class='zone-1-grid reset fill'>
-        <div class='zone-1-white-key-grid reset fill'>
-          {#each Zone1WhiteKeys as key}
+    <div class='reset octave'>
+      {#each zones as zone}
+        <div
+          class={
+            zone.number === 1 ? `reset fill zone-1-grid` :
+            zone.number === 2 ? `reset fill zone-2-grid` :
+            ``
+          }
+        >
+          {#each zone.keys as keys}
             <div
-              class='white-key'
-              class:augmented-key={notes.includes(`${key}${octave}aug`)}
-              class:major-key={notes.includes(`${key}${octave}ma`)}
-              class:perfect-key={notes.includes(`${key}${octave}P`)}
-              class:minor-key={notes.includes(`${key}${octave}mi`)}
-              class:diminished-key={notes.includes(`${key}${octave}dim`)}
+              class={
+                (zone.number === 1 && keys.color === `white`) ? `reset fill zone-1-white-key-grid` :
+                (zone.number === 1 && keys.color === `black`) ? `reset fill zone-1-black-key-grid` :
+                (zone.number === 2 && keys.color === `white`) ? `reset fill zone-2-white-key-grid` :
+                (zone.number === 2 && keys.color === `black`) ? `reset fill zone-2-black-key-grid` :
+                ``
+              }
             >
-              {key}
+              {#each keys.names as key (key.id)}
+                <div
+                  class={
+                    keys.color === `white` ? `white-key` :
+                    keys.color === `black` ? `black-key` :
+                    ``
+                  }
+                  class:augmented-key={
+                    notes.includes(`${key.name[0]}${octave}aug`) ||
+                    notes.includes(`${key.name[1]}${octave}aug`) ||
+                    notes.includes(`${key.name[2]}${octave}aug`)
+                  }
+                  class:major-key={
+                    notes.includes(`${key.name[0]}${octave}ma`) ||
+                    notes.includes(`${key.name[1]}${octave}ma`) ||
+                    notes.includes(`${key.name[2]}${octave}ma`)
+                  }
+                  class:perfect-key={
+                    notes.includes(`${key.name[0]}${octave}P`) ||
+                    notes.includes(`${key.name[1]}${octave}P`) ||
+                    notes.includes(`${key.name[2]}${octave}P`)
+                  }
+                  class:minor-key={
+                    notes.includes(`${key.name[0]}${octave}mi`) ||
+                    notes.includes(`${key.name[1]}${octave}mi`) ||
+                    notes.includes(`${key.name[2]}${octave}mi`)
+                  }
+                  class:diminished-key={
+                    notes.includes(`${key.name[0]}${octave}dim`) ||
+                    notes.includes(`${key.name[1]}${octave}dim`) ||
+                    notes.includes(`${key.name[2]}${octave}dim`)
+                  }
+                >
+                {#if
+                  notes.includes(`${key.name[0]}${octave}aug`) ||
+                  notes.includes(`${key.name[0]}${octave}P`) ||
+                  notes.includes(`${key.name[0]}${octave}ma`) ||
+                  notes.includes(`${key.name[0]}${octave}mi`) ||
+                  notes.includes(`${key.name[0]}${octave}dim`)
+                }
+                  <p transition:fade={{ duration: 500 }}>{key.name[0]}</p>
+                {:else if
+                  notes.includes(`${key.name[1]}${octave}aug`) ||
+                  notes.includes(`${key.name[1]}${octave}P`) ||
+                  notes.includes(`${key.name[1]}${octave}ma`) ||
+                  notes.includes(`${key.name[1]}${octave}mi`) ||
+                  notes.includes(`${key.name[1]}${octave}dim`)
+                }
+                  <p transition:fade={{ duration: 500 }}>{key.name[1]}</p>
+                {:else if
+                  notes.includes(`${key.name[2]}${octave}aug`) ||
+                  notes.includes(`${key.name[2]}${octave}P`) ||
+                  notes.includes(`${key.name[2]}${octave}ma`) ||
+                  notes.includes(`${key.name[2]}${octave}mi`) ||
+                  notes.includes(`${key.name[2]}${octave}dim`)
+                }
+                  <p transition:fade={{ duration: 500 }}>{key.name[2]}</p>
+                {:else if toggleNotes === true}
+                  {#if keys.color === `black`}
+                    <div class='stack'>
+                      <p transition:fade={{ duration: 500 }}>{key.name[0]}</p>
+                      <p transition:fade={{ duration: 500 }}>{key.name[1]}</p>
+                    </div>
+                  {:else}
+                    <p transition:fade={{ duration: 500 }}>{key.name[0]}</p>
+                  {/if}
+                {/if}
+
+                  <!-- {
+                    notes.includes(`${key.name[0]}${octave}aug`) ||
+                    notes.includes(`${key.name[0]}${octave}P`) ||
+                    notes.includes(`${key.name[0]}${octave}ma`) ||
+                    notes.includes(`${key.name[0]}${octave}mi`) ||
+                    notes.includes(`${key.name[0]}${octave}dim`)
+                    ?
+                    `${key.name[0]}`
+                    :
+                    notes.includes(`${key.name[1]}${octave}aug`) ||
+                    notes.includes(`${key.name[1]}${octave}P`) ||
+                    notes.includes(`${key.name[1]}${octave}ma`) ||
+                    notes.includes(`${key.name[1]}${octave}mi`) ||
+                    notes.includes(`${key.name[1]}${octave}dim`)
+                    ? 
+                    `${key.name[1]}`
+                    :
+                    notes.includes(`${key.name[2]}${octave}aug`) ||
+                    notes.includes(`${key.name[2]}${octave}P`) ||
+                    notes.includes(`${key.name[2]}${octave}ma`) ||
+                    notes.includes(`${key.name[2]}${octave}mi`) ||
+                    notes.includes(`${key.name[2]}${octave}dim`)
+                    ?
+                    `${key.name[2]}`
+                    :
+                    toggleNotes === true
+                    ?
+                    `${key.name[0]}`
+                    :
+                    ``
+                  } -->
+                </div>
+              {/each}
             </div>
           {/each}
         </div>
-        <div class='zone-1-black-key-grid reset fill'>
-          {#each Zone1BlackKeys as key}
-            <div
-              class='black-key'
-              class:augmented-key={notes.includes(`${key}${octave}aug`)}
-              class:major-key={notes.includes(`${key}${octave}ma`)}
-              class:perfect-key={notes.includes(`${key}${octave}P`)}
-              class:minor-key={notes.includes(`${key}${octave}mi`)}
-              class:diminished-key={notes.includes(`${key}${octave}dim`)}
-            >
-              {key}
-            </div>
-          {/each}
-        </div>
-      </div>
-      <div class='zone-2-grid reset fill'>
-        <div class='zone-2-white-key-grid reset fill'>
-          {#each Zone2WhiteKeys as key}
-            <div
-              class='white-key'
-              class:augmented-key={notes.includes(`${key}${octave}aug`)}
-              class:major-key={notes.includes(`${key}${octave}ma`)}
-              class:perfect-key={notes.includes(`${key}${octave}P`)}
-              class:minor-key={notes.includes(`${key}${octave}mi`)}
-              class:diminished-key={notes.includes(`${key}${octave}dim`)}
-            >
-              {key}
-            </div>
-          {/each}
-        </div>
-        <div class='zone-2-black-key-grid reset fill'>
-          {#each Zone2BlackKeys as key}
-            <div
-              class='black-key'
-              class:augmented-key={notes.includes(`${key}${octave}aug`)}
-              class:major-key={notes.includes(`${key}${octave}ma`)}
-              class:perfect-key={notes.includes(`${key}${octave}P`)}
-              class:minor-key={notes.includes(`${key}${octave}mi`)}
-              class:diminished-key={notes.includes(`${key}${octave}dim`)}
-            >
-              {key}
-            </div>
-          {/each}
-        </div>
-      </div>
+      {/each}
     </div>
   {/each}
 </div>

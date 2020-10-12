@@ -246,7 +246,10 @@
 			`about`,
 			`services`,
 			`contact`,
-			`models`
+			`models`,
+			`midi`,
+			`chords`,
+			`parallax`
 		]}
 	/>
 

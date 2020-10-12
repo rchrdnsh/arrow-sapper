@@ -27,11 +27,4 @@
     camera-controls
   ></model-viewer>
 
-  <!-- <model-viewer
-    src='models/sneaker-2/scene.gltf'
-    alt='A 3D model.'
-    auto-rotate
-    camera-controls
-  ></model-viewer> -->
-
 </div>
