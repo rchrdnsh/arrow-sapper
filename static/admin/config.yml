@@ -9,7 +9,7 @@ collections:
 
   - name: "tours"
     label: "Tours"
-    folder: "src/tours"
+    folder: "src/content/tours"
     create: true
     slug: "{{slug}}"
     fields:
@@ -20,7 +20,7 @@ collections:
 
   - name: "work"
     label: "Work"
-    folder: "src/work"
+    folder: "src/content/work"
     create: true
     slug: "{{slug}}"
     fields:
@@ -34,7 +34,7 @@ collections:
   - name: "team"
     identifier_field: name
     label: "Team"
-    folder: "src/team"
+    folder: "src/content/team"
     create: true
     slug: "{{slug}}"
     fields:

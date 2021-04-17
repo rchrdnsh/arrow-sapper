@@ -171,85 +171,15 @@
 
 <div class='app'>
 
-	<!-- <Navigation {segment} links={[undefined, `about`,`services`,`tours`,`team`, `work`, `contact`, `models`]}/> -->
-
-	<!-- <nav>
-		{#each links as link, index}
-			<a
-				rel='prefetch'
-				class={segment === link.path ? `selected` : ``}
-				href={link.path === undefined ? `` : link.path}
-			>
-				<p>{link.path === undefined ? `Home` : capitalize(link.path)}</p>
-				{#if segment == link.path}
-					<span in:receive={{ key: 'active' }} out:send={{ key: 'active' }}></span>
-				{/if}
-			</a>
-		{/each}
-	</nav> -->
-
-	<!-- <nav>
-		<ul>
-			{#each links as link, index}
-				<li>
-					<a
-						rel='prefetch'
-						on:click={() => active = index }
-						class={segment === link.path ? `selected` : ``}
-						href={link.path === undefined ? `` : link.path}
-					>
-						<p>{link.path === undefined ? `Home` : capitalize(link.path)}</p>
-						{#if index == active}
-							<span in:receive={{ key: 'active' }} out:send={{ key: 'active' }}></span>
-						{/if}
-					</a>
-				</li>
-			{/each}
-		</ul>
-	</nav> -->
-
-	<!-- <nav>
-		<ul>
-			<li>
-				<a
-					on:click={() => active = 1 }
-					in:receive={{ key: 'active' }}
-					out:send={{ key: 'active' }}
-					class={segment === undefined ? `selected` : ``}
-					href='.'
-				>
-					Home
-				</a>
-			</li>
-			<li>
-				<a on:click={() => active = 2 } in:receive={{ key: 'active' }} out:send={{ key: 'active' }} class={segment === `about` ? `selected` : ``} href='about'>About</a>
-			</li>
-			<li>
-				<a on:click={() => active = 3 } in:receive={{ key: 'active' }} out:send={{ key: 'active' }} class={segment === 'tours' ? `selected` : ``} href='tours'>Tours</a>
-			</li>
-			<li>
-				<a on:click={() => active = 4 } in:receive={{ key: 'active' }} out:send={{ key: 'active' }} class={segment === `team` ? `selected` : ``} href='team'>Team</a>
-			</li>
-			<li>
-				<a on:click={() => active = 5 } in:receive={{ key: 'active' }} out:send={{ key: 'active' }} class={segment === `test` ? `selected` : ``} href='test'>Test</a>
-			</li>
-			<li>
-				<a on:click={() => active = 6 } in:receive={{ key: 'active' }} out:send={{ key: 'active' }} class={segment === `buttons` ? `selected` : ``} href='buttons'>Buttons</a>
-			</li>
-		</ul>
-	</nav> -->
-
 	<Navigation
 		{segment}
 		links={[
 			undefined,
 			`about`,
-			`services`,
+			`team`,
+			`tours`,
+			`work`,
 			`contact`,
-			`models`,
-			`midi`,
-			`chords`,
-			`parallax`
 		]}
 	/>
 
